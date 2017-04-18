@@ -1,7 +1,3 @@
-FROM golang
- 
-ADD . /go/src/hello
-RUN go install hello
-ENTRYPOINT /go/bin/basic_web_server
- 
+FROM golang:1.6-onbuild
+
 EXPOSE 8083
