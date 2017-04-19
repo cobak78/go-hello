@@ -7,7 +7,8 @@ import(
 )
  
 func indexHandler( w http.ResponseWriter, r *http.Request){
-	fmt.Fprintf(w, "hello world, I'm running on %s with an %s CPU on IP %s", runtime.GOOS,runtime.GOARCH, r.RemoteAddr )
+	fmt.Fprintf(w, "hello world, I'm running on %s with an %s CPU on IP %s \n", runtime.GOOS,runtime.GOARCH, r.RemoteAddr )
+	fmt.Fprintf(w, "r: %+v\n", r)
 }
 
 func pingHandler( w http.ResponseWriter, r *http.Request) {
